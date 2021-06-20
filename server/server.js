@@ -3,8 +3,19 @@ const path = require('path');
 const db = require('./config/connection');
 const routes = require('./routes');
 
+// added the apollo server
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+  context: authMiddleware,
+});
+
+// added middleware
+server.applyMiddleware({ app });
+///
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

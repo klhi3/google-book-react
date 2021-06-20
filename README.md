@@ -36,7 +36,7 @@ Google Books API search engine built with a RESTful API, and refactor it to be a
 
 ```
 
-# Diploy
+## Diploy
 
 * source in [github](https://github.com/klhi3/google-book-react)
 * deploy [heroku]()
